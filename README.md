@@ -19,23 +19,6 @@
   </p>
 </div>
 
-> [!NOTE]
-> **OpenCore Legacy Patcher 3.0.0 – Now Supports macOS Tahoe 26!**
-> 
-> The long awaited version 3.0.0 of OpenCore Legacy Patcher is here, bringing **initial support for macOS Tahoe 26** to the community!
-> 
-> 🚨 **Please Note:**  
-> - Only OpenCore-Patcher 3.0.0 **from the [lzhoang2801/OpenCore-Legacy-Patcher](https://github.com/lzhoang2801/OpenCore-Legacy-Patcher/releases/tag/3.0.0)** repository provides support for macOS Tahoe 26 with early patches.
-> - Official Dortania releases or older patches **will NOT work** with macOS Tahoe 26.  
-
-> [!WARNING]
-> While OpCore Simplify significantly reduces setup time, the Hackintosh journey still requires:
-> - Understanding basic concepts from the [Dortania Guide](https://dortania.github.io/OpenCore-Install-Guide/)
-> - Testing and troubleshooting during the installation process
-> - Patience and persistence in resolving any issues that arise
->
-> Our tool does not guarantee a successful installation in the first attempt, but it should help you get started.
-
 ## ✨ **Features**
 
 1. **Comprehensive Hardware and macOS Support**  
@@ -101,39 +84,30 @@
    - On **macOS**, run `OpCore-Simplify.command`.
    - On **Linux**, run `OpCore-Simplify.py` with existing Python interpreter.
 
-   ![OpCore Simplify Menu](https://i.imgur.com/vTr1V9D.png)
+   ![OpCore Simplify Main](./images/main.png)
 
 3. **Selecting hardware report**:
-   - On Windows, there will be an option for `E. Export hardware report`. It's recommended to use this for the best results with your hardware configuration and BIOS at the time of building.
-   - Alternatively, use [**Hardware Sniffer**](https://github.com/lzhoang2801/Hardware-Sniffer) to create a `Report.json` and ACPI dump for configuration manully.
 
-   ![Selecting hardware report](https://i.imgur.com/MbRmIGJ.png)
+   ![Selecting hardware report](./images/select-hardware-report.png)
 
-   ![Loading ACPI Tables](https://i.imgur.com/SbL6N6v.png)
+4. **Verifying hardware compatibility**:
 
-   ![Compatibility Checker](https://i.imgur.com/kuDGMmp.png)
+   ![Compatibility Checker](./images/compatibility-checker.png)
 
-4. **Selecting macOS Version and Customizing OpenCore EFI**:
+5. **Selecting macOS Version and Customizing OpenCore EFI**:
    - By default, the latest compatible macOS version will be selected for your hardware.
    - OpCore Simplify will automatically apply essential ACPI patches and kexts. 
    - You can manually review and customize these settings as needed.
 
-   ![OpCore Simplify Menu](https://i.imgur.com/TSk9ejy.png)
+   ![Configuration Page](./images/configuration-page.png)
 
-5. **Building OpenCore EFI**:
+6. **Building OpenCore EFI**:
    - Once you've customized all options, select **Build OpenCore EFI** to generate your EFI.
    - The tool will automatically download the necessary bootloader and kexts, which may take a few minutes.
 
-   ![WiFi Profile Extractor](https://i.imgur.com/71TkJkD.png)
+   ![OCLP Warning](./images/oclp-warning.png)
 
-   ![Choosing Codec Layout ID](https://i.imgur.com/Mcm20EQ.png)
-
-   ![Building OpenCore EFI](https://i.imgur.com/deyj5de.png)
-
-6. **USB Mapping**:
-   - After building your EFI, follow the steps for mapping USB ports.
-
-   ![Results](https://i.imgur.com/MIPigPF.png)
+   ![Build Result](./images/build-result.png)
 
 7. **Create USB and Install macOS**: 
    - Use [**UnPlugged**](https://github.com/corpnewt/UnPlugged) on Windows to create a USB macOS installer, or follow [this guide](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html) for macOS.
@@ -158,6 +132,7 @@ Distributed under the BSD 3-Clause License. See `LICENSE` for more information.
 
 - [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg) and [kexts](https://github.com/lzhoang2801/OpCore-Simplify/blob/main/Scripts/datasets/kext_data.py) – The backbone of this project.
 - [SSDTTime](https://github.com/corpnewt/SSDTTime) – SSDT patching utilities.
+- [@rubentalstra](https://github.com/rubentalstra): Idea and code prototype [Implement GUI #471](https://github.com/lzhoang2801/OpCore-Simplify/pull/471)
 
 ## 📞 **Contact**
 
